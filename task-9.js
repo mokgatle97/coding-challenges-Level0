@@ -2,23 +2,13 @@
 
 const vowels = function (string) {
     let letters = string.split('');
-    let vowelLetters = [];
+    let lettersCount = [];
+    let vowelLetters = ['a', 'e','i','o','u', 'A','E', 'I', 'O', 'U'];
     for (let i = 0; i < letters.length; i++){
-        if(letters[i] === 'a') {
-        vowelLetters.push(letters[i]);
-    } else if (letters[i] === 'e') {
-        vowelLetters.push(letters[i]);
-    } else if (letters[i] === 'i'){
-        vowelLetters.push(letters[i]);
-    } else if (letters[i] === 'o') {
-        vowelLetters.push(letters[i]);
-        console.log(letters);
-    } else (letters[i] === 'u'); {
-        vowelLetters.push(letters[i]);
-        // console.log(vowelLetters);
+        if(vowelLetters.includes(letters[i])) {
+        lettersCount.push(letters[i]);
+     }
     }
-    return vowelLetters.join(', ')
-    }
+    return lettersCount.join(', ');
 };
 
-console.log(vowels('string'));
